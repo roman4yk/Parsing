@@ -18,7 +18,10 @@ namespace WindowsFormsApp2
             UpdateWebBrowser uwb = new UpdateWebBrowser();
             Parser parser = new Parser();
             parser.GetValutesFromDOM();
-
+            ParserPlayers ps = new ParserPlayers();
+            List<Player> lp = ps.GetPlayers();
+            string s = "";
+            Console.Read();
         }
         public void FillDataGridTeams()
         {

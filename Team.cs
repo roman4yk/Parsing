@@ -31,7 +31,7 @@ namespace WindowsFormsApp2
         double Blocks { get; set; }
         double Turnovers { get; set; }
         double Fouls { get; set; }
-        double Points { get; set; }
+        double Points { get; }
         string TeamProfileRefernce { get; set; }
 
         List<Player> ListPlayer { get; set; }

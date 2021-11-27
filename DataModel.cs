@@ -9,5 +9,6 @@ namespace WindowsFormsApp2
     public static class DataModel
     {
         public static List<Team> ListTeams = new List<Team>();
+        public static List<Player> ListPlayers = new List<Player>();
     }
 }

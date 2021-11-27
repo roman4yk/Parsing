@@ -7,3 +7,12 @@ C:\Users\user\source\repos\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.Ge
 C:\Users\user\source\repos\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\user\source\repos\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\user\source\repos\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\user\Source\Repos\roman4yk\Parsing\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\user\Source\Repos\roman4yk\Parsing\bin\Debug\WindowsFormsApp2.exe
+C:\Users\user\Source\Repos\roman4yk\Parsing\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.exe
+C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.pdb

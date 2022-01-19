@@ -14,6 +14,9 @@ namespace WindowsFormsApp2
     class Parser
     {
         private WebBrowser wb = new WebBrowser();
+        public delegate void FinishLoad(List<Team> teams);
+       public event FinishLoad eventFinishLoad;
+
 
         string Address = "https://www.basketball-reference.com/leagues/NBA_2021.html";
         public void GetValutesFromDOM()
@@ -26,6 +29,7 @@ namespace WindowsFormsApp2
         // Метод для обработки загруженной DOM-модели
         private void WebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+            List<Team> teams = new List<Team>();
             HtmlDocument hd = wb.Document;
             string html = hd.Body.InnerHtml;
             string regexp1 = "<table class=\"stats_table sortable.*<\\/table>";
@@ -77,26 +81,10 @@ namespace WindowsFormsApp2
                 double pts = Convert.ToDouble(m.Groups[25].Value.Replace('.', ','));
 
 
-                DataModel.ListTeams.Add(new Team(name, abr, countGame, fg, fga, fgP, threeP, threePA, threePP, twoP, twoPA,
+                teams.Add(new Team(name, abr, countGame, fg, fga, fgP, threeP, threePA, threePP, twoP, twoPA,
                     twoPP, ft, fta, ftp, oreb, dreb, trb, ast, stl, blk, tov, pf, pts, strprofileReference));
             }
-            List<Team> teams = DataModel.ListTeams;
-            wb.DocumentCompleted -= WebBrowser_DocumentCompleted;
-            foreach (Team t in DataModel.ListTeams)
-            {
-                wb.BeginInvoke(new Action(() =>
-                {
-                    this.wb.Navigate(t.GetProfileReference());
-                    this.wb.DocumentCompleted += FillPlayerProfileReference;
-                }));
-            }
-        }
-
-        private void FillPlayerProfileReference(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-            HtmlDocument hd = wb.Document;
-            string html = hd.Body.InnerHtml;
-
+            if (eventFinishLoad != null) eventFinishLoad(teams);
         }
     }
 }

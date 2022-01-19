@@ -82,29 +82,33 @@ namespace WindowsFormsApp2
                 Regex regexinfo = new Regex(regExpInfo);
                 MatchCollection infoPlayerMatches = regexinfo.Matches(playerinfo);
 
-                int id = Convert.ToInt32(player.Groups[1].Value);
-                string name = infoPlayerMatches[0].Groups[1].Value;
-                string surname= infoPlayerMatches[0].Groups[2].Value;
-                DateTime birthday= Convert.ToDateTime(infoPlayerMatches[0].Groups[3].Value);
-                string country= infoPlayerMatches[0].Groups[4].Value;
-                double height= Convert.ToDouble(infoPlayerMatches[0].Groups[5].Value.Replace('-', ','));
-                double weight= Convert.ToDouble(infoPlayerMatches[0].Groups[6].Value);
-                int age = Convert.ToInt32(player.Groups[6].Value);
-                string gp = infoPlayerMatches[0].Groups[8].Value;
-                int seasonExp=Convert.ToInt32(infoPlayerMatches[0].Groups[7].Value);
-                bool greatest75=ConvertToBool(infoPlayerMatches[0].Groups[9].Value);
-
-                double[] statistic = new double[player.Groups.Count-6];
-                int j = 0;
-                for (int i = 6; i < player.Groups.Count; i++)
+                if (infoPlayerMatches.Count > 0)
                 {
-                    statistic[j] = Convert.ToDouble(player.Groups[i].Value.Replace('.',','));
-                    j++;
-                }
+                    int id = Convert.ToInt32(player.Groups[1].Value);
+                    string name = infoPlayerMatches[0].Groups[1].Value;
+                    string surname = infoPlayerMatches[0].Groups[2].Value;
+                    DateTime birthday = Convert.ToDateTime(infoPlayerMatches[0].Groups[3].Value);
+                    string country = infoPlayerMatches[0].Groups[4].Value;
+                    double height = Convert.ToDouble(infoPlayerMatches[0].Groups[5].Value.Replace('-', ','));
+                    double weight = Convert.ToDouble(infoPlayerMatches[0].Groups[6].Value);
+                    int age = Convert.ToInt32(player.Groups[6].Value);
+                    string gp = infoPlayerMatches[0].Groups[8].Value;
+                    int seasonExp = Convert.ToInt32(infoPlayerMatches[0].Groups[7].Value);
+                    bool greatest75 = ConvertToBool(infoPlayerMatches[0].Groups[9].Value);
 
-                Player p = new Player(id, name, surname, birthday, country, height, weight, age, gp, seasonExp, 0, 0, greatest75, statistic);
-                listPlayers.Add(p);
-                Thread.Sleep(1000);
+                    double[] statistic = new double[player.Groups.Count - 6];
+                    int j = 0;
+                    for (int i = 6; i < player.Groups.Count; i++)
+                    {
+                        statistic[j] = Convert.ToDouble(player.Groups[i].Value.Replace('.', ','));
+                        j++;
+                    }
+
+                    Player p = new Player(id, name, surname, birthday, country, height, weight, age, gp, seasonExp, 0, 0, greatest75, statistic);
+                    listPlayers.Add(p);
+                    Thread.Sleep(1000);
+                }
+               
             }
             return listPlayers;
             

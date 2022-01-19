@@ -40,18 +40,18 @@ namespace WindowsFormsApp2
         }
 
         int ID { get; set; }
-        string Name { get; set; }
-        string Surname { get; set; }
-        DateTime Birthdate { get; set; }
-        string Country { get; set; }
-        double height { get; set; }
-        double weight { get; set; }
-        int Age { get; set; }
-        string Position { get; set; }
-        int SeasonExp { get; set; }
-        int DraftRound { get; set; }
-        int DraftNumber { get; set; }
-        bool Greatest75 { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime Birthdate { get; set; }
+        public string Country { get; set; }
+        public double height { get; set; }
+        public double weight { get; set; }
+        public int Age { get; set; }
+        public string Position { get; set; }
+        public int SeasonExp { get; set; }
+        public int DraftRound { get; set; }
+        public int DraftNumber { get; set; }
+        public bool Greatest75 { get; set; }
 
         //"headers":["PLAYER_ID","PLAYER_NAME","NICKNAME","TEAM_ID","TEAM_ABBREVIATION","AGE","GP","W","L","W_PCT","MIN","FGM",
         //"FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF",
@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
         //"FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK",
         //"DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK",
         //"PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","CFID","CFPARAMS"]
-        double[] Statistic { get; set; }
+        public double[] Statistic { get; set; }
 
     }
 }

@@ -8,31 +8,31 @@ namespace WindowsFormsApp2
 {
     public class Team
     {
-        string Name { get; set; }
-        string Abriviation { get; set; }
-        int CountGame { get; set; }
-        double FieldGoals { get; set; }
-        double FielGoalsAttempts { get; set; }
-        double FielGoalPersentage { get; set; }
-        double ThreePointGoals { get; set; }
-        double ThreePointAttempts { get; set; }
-        double ThreePointPersentage { get; set; }
-        double TwoPointGoals { get; set; }
-        double TwoPointAttempts { get; set; }
-        double TwoPointPersentage { get; set; }
-        double FreeThrow { get; set; }
-        double FreeThrowAttemps { get; set; }
-        double FreeThrowPercentage { get; set; }
-        double OffReb { get; set; }
-        double DeffReb { get; set; }
-        double TotalReb { get; set; }
-        double Assists { get; set; }
-        double Steals { get; set; }
-        double Blocks { get; set; }
-        double Turnovers { get; set; }
-        double Fouls { get; set; }
-        double Points { get; }
-        string TeamProfileRefernce { get; set; }
+        public string Name { get; set; }
+        public string Abriviation { get; set; }
+        public int CountGame { get; set; }
+        public double FieldGoals { get; set; }
+        public double FielGoalsAttempts { get; set; }
+        public double FielGoalPersentage { get; set; }
+        public double ThreePointGoals { get; set; }
+        public double ThreePointAttempts { get; set; }
+        public double ThreePointPersentage { get; set; }
+        public double TwoPointGoals { get; set; }
+        public double TwoPointAttempts { get; set; }
+        public double TwoPointPersentage { get; set; }
+        public double FreeThrow { get; set; }
+        public double FreeThrowAttemps { get; set; }
+        public double FreeThrowPercentage { get; set; }
+        public double OffReb { get; set; }
+        public double DeffReb { get; set; }
+        public double TotalReb { get; set; }
+        public double Assists { get; set; }
+        public double Steals { get; set; }
+        public double Blocks { get; set; }
+        public double Turnovers { get; set; }
+        public double Fouls { get; set; }
+        public double Points { get; }
+        public string TeamProfileRefernce { get; set; }
 
         List<Player> ListPlayer { get; set; }
         public Team(string name, string abriviation, int countGame, double fieldGoals,

@@ -18,13 +18,19 @@ namespace WindowsFormsApp2
             UpdateWebBrowser uwb = new UpdateWebBrowser();
             Parser parser = new Parser();
             parser.GetValutesFromDOM();
+            parser.eventFinishLoad += FillDataGridTeams;
+            dataGridView1.AutoGenerateColumns=true;
+            dataGridView2.AutoGenerateColumns = true;
             ParserPlayers ps = new ParserPlayers();
-            List<Player> lp = ps.GetPlayers();
-            string s = "";
-            Console.Read();
+            var source = new BindingSource();
+            source.DataSource = ps.GetPlayers();
+            dataGridView2.DataSource = source;
         }
-        public void FillDataGridTeams()
+        public void FillDataGridTeams(List<Team> teams)
         {
+            var source = new BindingSource();
+            source.DataSource = teams;
+            dataGridView1.DataSource = source;
         }
     }
 }

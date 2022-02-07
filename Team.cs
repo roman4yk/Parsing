@@ -8,6 +8,7 @@ namespace WindowsFormsApp2
 {
     public class Team
     {
+
         public string Name { get; set; }
         public string Abriviation { get; set; }
         public int CountGame { get; set; }
@@ -35,6 +36,7 @@ namespace WindowsFormsApp2
         public string TeamProfileRefernce { get; set; }
 
         List<Player> ListPlayer { get; set; }
+
         public Team(string name, string abriviation, int countGame, double fieldGoals,
             double fielGoalsAttempts, double fielGoalPersentage, double threePointGoals,
             double threePointAttempts, double threePointPersentage, double twoPointGoals,

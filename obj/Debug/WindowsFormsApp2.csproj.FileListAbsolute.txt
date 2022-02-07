@@ -17,3 +17,7 @@ C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.exe
 C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.csproj.SuggestedBindingRedirects.cache
 C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\roman4yk\Parsing\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Source\Repos\roman4yk\Parsing\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Source\Repos\roman4yk\Parsing\obj\Debug\WindowsFormsApp2.csproj.CopyComplete

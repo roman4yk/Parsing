@@ -15,22 +15,33 @@ namespace WindowsFormsApp2
         public Form1()
         {
             InitializeComponent();
+            ParserTeams pT = new ParserTeams();
             UpdateWebBrowser uwb = new UpdateWebBrowser();
-            Parser parser = new Parser();
-            parser.GetValutesFromDOM();
-            parser.eventFinishLoad += FillDataGridTeams;
+            Parser parserT = new Parser();
+
+            parserT.GetValutesFromDOM();
+            parserT.eventFinishLoad += InitTeams;
+
             dataGridView1.AutoGenerateColumns=true;
             dataGridView2.AutoGenerateColumns = true;
-            ParserPlayers ps = new ParserPlayers();
-            var source = new BindingSource();
-            source.DataSource = ps.GetPlayers();
-            dataGridView2.DataSource = source;
+
+            ParserPlayers parserP = new ParserPlayers();
+            InitPlayers(parserP.GetPlayers());
         }
-        public void FillDataGridTeams(List<Team> teams)
+
+        public void InitTeams(List<Team> teams)
         {
+            DataModel.ListTeams=teams;
             var source = new BindingSource();
             source.DataSource = teams;
             dataGridView1.DataSource = source;
+        }
+        public void InitPlayers(List<Player> players)
+        {
+            DataModel.ListPlayers=players;
+            var source = new BindingSource();
+            source.DataSource = DataModel.ListPlayers;
+            dataGridView2.DataSource = source;
         }
     }
 }

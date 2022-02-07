@@ -13,12 +13,11 @@ namespace WindowsFormsApp2
     class ParserPlayers
     {
         public ParserPlayers()
-        {
-            
+        { 
             PlayerStatsString = GetPlayerStats();
         }
 
-        string PlayerStatsString { get;}
+        private string PlayerStatsString { get;}
 
 
         string GetPlayerStats()
@@ -106,7 +105,7 @@ namespace WindowsFormsApp2
 
                     Player p = new Player(id, name, surname, birthday, country, height, weight, age, gp, seasonExp, 0, 0, greatest75, statistic);
                     listPlayers.Add(p);
-                    Thread.Sleep(1000);
+                    Thread.Sleep(600);
                 }
                
             }
@@ -118,6 +117,7 @@ namespace WindowsFormsApp2
             if (boolname == "Y") return true;
             else return false;
         }
+
         string GetPlayerInfo(int idPlayer)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://stats.nba.com/stats/commonplayerinfo?LeagueID=&PlayerID=" + idPlayer.ToString());

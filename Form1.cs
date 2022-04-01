@@ -15,12 +15,14 @@ namespace WindowsFormsApp2
         public Form1()
         {
             InitializeComponent();
-            ParserTeams pT = new ParserTeams();
+           // ParserGames pG = new ParserGames();
+            //pG.GetGames();
+           // ParserTeams pT = new ParserTeams();
             UpdateWebBrowser uwb = new UpdateWebBrowser();
-            Parser parserT = new Parser();
+            //Parser parserT = new Parser();
 
-            parserT.GetValutesFromDOM();
-            parserT.eventFinishLoad += InitTeams;
+            //parserT.GetValutesFromDOM();
+            //parserT.eventFinishLoad += InitTeams;
 
             dataGridView1.AutoGenerateColumns=true;
             dataGridView2.AutoGenerateColumns = true;

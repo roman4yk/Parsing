@@ -15,7 +15,6 @@ namespace WindowsFormsApp2
 {
     class ParserTeams
     {
-
         List<Dictionary<string,object>> TeamsInfo = new List<Dictionary<string, object>>();
 
         //TeamStatsKeys ["GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS"]
@@ -23,7 +22,7 @@ namespace WindowsFormsApp2
         
         public ParserTeams()
         {
-            string s = GetJsonString("https://stats.nba.com/stats/boxscoretraditionalv3?GameID=0022100751&LeagueID=00&endPeriod=4&endRange=28800&rangeType=1&startPeriod=1&startRange=0");
+            //string s = GetJsonString("https://stats.nba.com/stats/boxscoretraditionalv3?GameID=0022100751&LeagueID=00&endPeriod=4&endRange=28800&rangeType=1&startPeriod=1&startRange=0");
             string jsonInfoTeamsString = GetJsonString("https://stats.nba.com/stats/leaguestandingsv3?LeagueID=00&Season=2021-22&SeasonType=Regular%20Season");
             TeamsInfo = GetTeamsInfo(jsonInfoTeamsString);
             TeamsStats = GetTeamsStats(TeamsInfo);
